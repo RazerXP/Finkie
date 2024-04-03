@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finkie</title>
+<link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
+<link href="../stylesheets/renderTables.css" rel="stylesheet">
+<link href="../stylesheets/sipCALC.css" rel="stylesheet">
+<link href="../stylesheets/navbarfooter.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body style="background-color:#0F1719;">
+    <div style="display: none;" id="pookie">../assets/investmentCALC.csv</div> <!-- SELECT THE SHEET -->
+    <div class="navbar">
+        <img class="fin" src="../assets/FINKIE.png">
+        <div class="navbar-right"> 
+        <a href=".././index.html#tools">Tools</a>
+        <a href=".././index.html#essentials">Essentials</a>
+        <a href=".././index.html#blogs">Blogs</a>
+        <a href=".././index.html#aboutus">About us</a>
+        </div>
+    </div>
+    <center><div id="card" style="max-height: fit-content;">
+        <div id="header">
+            <span id="logo" style="display: flex; align-items:center;">
+                <svg class="rupee" style="width: 100px; height:100px; padding:0px 0px;" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"/>
+                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#000000" stroke-width="0.8160000000000001" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#000000"/> </g>
+                </svg>
+            </span>
+            <span id="text">
+                <h2 style="text-align: left;">INVESTMENT Calculator</h2>
+            </span>
+        </div>
+        <div id="contents">
+            <div id="first">
+                <input type="checkbox" id="toggle" onchange="SipToLumpsum()">
+                <label for="toggle" id="toggler">
+                    <span class="sip">SIP</span>
+                    <span class="lumpsum">LUMPSUM</span>
+                </label>
+            </div>
+            <div id="second">
+                <div class="topic">
+                    <div class="info" id="Monthly-Investment-Amount">Investment Amount</div>
+                    <div class="info-button" id="info-button1">i</div>
+                    <div class="textCONTENT" id="info-text1">The amount of money you want to invest monthly.</div>
+                </div>
+                <div class="sliderAndInput">
+                    <div class="slider-container">
+                        <div class="progress-bar" id="progressBar1"></div>
+                        <div class="slider-handle" id="sliderHandle1"></div>
+                    </div>
+                    <div class="box">
+                        <svg class="rupee" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#BCF145" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#BCF145"/> </g>
+                        </svg>
+                        <input type="text" class="slider-value" id="sliderValue1" value="50" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div id="third">
+                <div class="topic">
+                    <div class="info">Time Period</div>
+                    <div class="info-button" id="info-button2">i</div>
+                    <div class="textCONTENT" id="info-text2">Time duration for which you want to save and invest your money.</div>
+                </div>
+                <div class="sliderAndInput">
+                    <div class="slider-container">
+                        <div class="progress-bar" id="progressBar2"></div>
+                        <div class="slider-handle" id="sliderHandle2"></div>
+                    </div>
+                    <div class="box">
+                        <svg class="rupee" style="width:50px; height:50px; margin-left:5px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>                          
+                            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM11.8284 6.75736C12.3807 6.75736 12.8284 7.20507 12.8284 7.75736V12.7245L16.3553 14.0653C16.8716 14.2615 17.131 14.8391 16.9347 15.3553C16.7385 15.8716 16.1609 16.131 15.6447 15.9347L11.4731 14.349C11.085 14.2014 10.8284 13.8294 10.8284 13.4142V7.75736C10.8284 7.20507 11.2761 6.75736 11.8284 6.75736Z" fill="#BCF145"/> </g>
+                        </svg>
+                        <input type="text" class="slider-value" id="sliderValue2" value="50" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <table id="csvTable" border="1px"></table><!-- Table data will be dynamically added here -->
+    </center>
+    <div class="navbar2">
+        <img class="fink" src="../assets/Group 6.png">
+        <div class="navbar-right2">
+            <a href="#PRIVACY">PRIVACY POLICY</a>
+            <a href="#USER">USER AGREEMENT</a>
+            <a href="#SUPPORT">SUPPORT</a>
+            <a class="TEAM" href="#TEAM">TEAM</a>
+        </div>
+    </div>
+<script src="../scripts/sliders.js"></script>
+<script src="../scripts/renderTables.js"></script>
+</body>
+</html>

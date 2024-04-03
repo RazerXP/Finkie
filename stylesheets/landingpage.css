@@ -1,0 +1,314 @@
+
+body{
+    font-family: 'Lexend';
+    background-color:#0f1719;
+     /* height:400vh; */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.banner{
+  background-color: #0a220b42;
+  width:100%;
+  height: 100vh;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius:20px;
+  font-size:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: lexend;
+}
+
+.cardpage{
+  background-color:#0f1719;
+  width:100%;
+  margin-bottom: 50px;
+}
+
+.finance{
+  background-color:#21292B;
+  height:fit-content;
+  width:100%;
+}
+
+.essentials,.heightde{
+  height:fit-content;
+}
+
+.container4{
+  max-width: fit-content;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+  column-gap:2cm;
+  height:fit-content;
+}
+
+
+.blogs{
+  background-color:#0f1719;
+  height:fit-content;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.midblog,.financetools{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.financetools,.midblog{
+  margin-bottom: 80px;
+}
+
+.bcard{
+  background-color: antiquewhite;
+  width:30vw;
+  height:70vh;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height:fit-content;
+}
+
+.title {
+  text-align: center;
+  font-size: 82px;
+  font-family: 'Lexend Medium', sans-serif;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.title span {
+  color: #BCF145;
+}
+.descfintools{
+  font-size: 14px;
+  line-height: 1.6;
+  font-family:lexend;
+  font-weight: lighter;
+  color: #858585;
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  font-size: 21px;
+  font-family: 'Lexend Regular', sans-serif;
+  margin-bottom: 100px;
+  color: #858585;
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  width: 25%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  border-radius: 40px;
+  background: #21292B;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0px 20px 30px 20px;
+  transition: transform 0.5s ease;
+}
+.card:hover, .viewmorebutt:hover{
+  transform: scale(1.03); /* Increase size by 5% on hover */
+  box-shadow: 0 8px 16px #0e1214; /* Add shadow on hover */
+}
+.card2:hover{
+    transform: scale(1.03); /* Increase size by 5% on hover */
+  box-shadow: 0 8px 16px #181b1c; /* Add shadow on hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.card-content {
+  padding: 5px; 
+  color: #fff;
+  font-family: 'Lexend Regular', sans-serif;
+  font-size: 21px;}
+
+@media (max-width: 992px) {
+  .card {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+      width: calc(100% - 20px);
+  }
+}
+
+
+
+
+.button-container {
+  width: 100%;
+  padding: 0px 10%;
+  margin-top: 20px;
+}
+
+
+.calcbutton {
+  padding: 0.3cm 1cm; /* Adjusted padding for 5 cm size */
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%; /* Set button width to 100% of the container width minus padding */
+  margin-bottom: 10px; /* Add margin between buttons */
+  position: relative;
+  font-family: 'Lexend Regular', sans-serif;
+  background-color: #bcf145; /* Set background color for upper button */
+  color: #0f1719; /* Change text color for upper button */
+}
+
+.knowbutton {
+  padding: 0.3cm 1cm; /* Adjusted padding for 5 cm size */
+  border: none;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%; /* Set button width to 100% of the container width minus padding */
+  margin-bottom: 10px; /* Add margin between buttons */
+  position: relative;
+  font-family: 'Lexend Regular', sans-serif;
+  background-color: #21292b; /* Set background color for lower button */
+  border: 3px solid #bcf145; /* Add border to lower button */
+  color:#bcf145;
+}
+
+
+.container2{
+  display:flex;
+  flex-direction: column;
+}
+
+.containess{
+  display: flex;
+  flex-direction: row;
+  height:fit-content;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 50px;
+}
+.finessenheader{
+  max-width: 40%;
+}
+.fiessen{
+  max-width: 100%;
+}
+.finessencontents{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family:lexend;
+  font-weight: lighter;
+  color: #858585;
+}
+.card2 {
+  transition: transform 0.5s ease;
+  width: 40%;
+  margin-bottom: 30px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border-radius: 40px;
+  background: #181E20;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+
+.card2 img {
+  width: 100%;
+  height: auto;
+  aspect-ratio:4/3;
+  object-fit: cover;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+
+.card2-content {
+  padding: 5px; 
+  color: #fff;
+  font-family: 'Lexend Regular', sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .card2 {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .card2 {
+      width: calc(100% - 20px);
+  }
+}
+
+.viewmore{
+  width:5.9cm;
+  margin:auto;
+  margin-top: 3vh;
+}
+
+.viewmorebutt{
+  transition: transform 0.3s ease;
+  color:#0f1719;
+  background-color:#BCF145;
+  border: none;
+  width:2.5cm;
+  padding: 10px 62px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  white-space: nowrap;
+}
