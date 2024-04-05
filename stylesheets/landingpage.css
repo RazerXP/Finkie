@@ -136,7 +136,7 @@ html{
 }
 
 .card-content {
-  padding: 5px; 
+  padding: 20px; 
   text-align: center;
   color: #fff;
   font-family: 'Lexend Regular', sans-serif;
@@ -286,40 +286,6 @@ html{
   margin-bottom: 10px;
 }
 
-@media (max-width: 992px) {
-  .card2 {
-    width: calc(40% - 20px);
-}
-.containess{
-  flex-wrap: wrap;
-}
-.container4{
-  padding-top: 20px;
-  justify-content: center;
-}
-.finessenheader{
-  max-width: 100%;
-  width: 100%;
-}
-}
-
-@media (max-width: 576px) {
-  .card2 {
-      width: calc(100% - 20px);
-  }
-  .containess{
-    flex-wrap: wrap;
-  }
-  .container4{
-    padding-top: 20px;
-    justify-content: center;
-  }
-  .finessenheader{
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
 .viewmore{
   width:5.9cm;
   margin:auto;
@@ -344,3 +310,59 @@ html{
   border-radius: 20px;
   white-space: nowrap;
 }
+
+@media (max-width: 992px) {
+  .card2 {
+      width: calc(40% - 20px);
+      margin-bottom: 50px;
+  }
+  .cardpage .container .card{
+    margin-bottom: 50px;
+  }
+  .blogs .container .card{
+    width: 40%;
+  }
+  .containess{
+    flex-wrap: wrap;
+    padding: 70px 40px 20px 40px;
+  }
+  .container4{
+    padding-top: 20px;
+    justify-content: center;
+  }
+  .finessenheader{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card2 {
+      width: calc(100% - 20px);
+  }
+  .containess{
+    flex-wrap: wrap;
+  }
+  .container4{
+    padding-top: 20px;
+    margin-bottom: 0px;
+    justify-content: center;
+  }
+  .finessenheader{
+    max-width: 100%;
+    width: 100%;
+  }
+  .blogs .container .card{
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  
+  .container{
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .viewmore{
+    margin-top: 0px;
+  }
+}
+
