@@ -124,7 +124,7 @@ html{
 }
 .card2:hover{
     transform: scale(1.03); /* Increase size by 5% on hover */
-  box-shadow: 0 8px 16px #181b1c; /* Add shadow on hover */
+    box-shadow: 0 8px 16px hsl(192, 13%, 10%); /* Add shadow on hover */
 }
 
 .card img {
@@ -220,7 +220,7 @@ html{
   height:fit-content;
   justify-content: space-evenly;
   align-items: center;
-  padding: 70px 50px 50px 50px;
+  padding: 70px 120px 50px 120px;
 }
 .finessenheader{
   max-width: 40%;
