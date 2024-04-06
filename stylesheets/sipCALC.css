@@ -118,22 +118,35 @@
 
 #second, #third, #fourth{
     background-color: #21292B;
-    height:120px;
-    margin: 10px 40px 0px 40px;
-    padding: 10px 20px;
+    height:fit-content;
+    margin: 0px 80px 0px 40px;
+    padding: 0px 20px;
     text-align: left;
 }
-
+.secondbox{
+    width: 100%;
+}
+.topiccontainer{
+    display: flex;
+    justify-content: start;
+    transform: translate(5px, 25px);
+}
+.infobtn{
+    display: flex;
+    align-items: end;
+    transform: translate(0px, -10px);
+    width: fit-content;
+    height: 100%;
+}
 .topic{
     display: flex;
     align-items: end;
     justify-content: baseline;
     background-color: #21292B;
-    width:60%;
     height:60px;
-
 }
 .info{
+    width: auto;
     margin-bottom: 0px;
     padding:5px 5px;
     color: white;
@@ -143,10 +156,11 @@
 }
 .sliderAndInput{
     display: flex;
+    flex-wrap: wrap-reverse;
+    width:100%;
     justify-content: space-between;
-    margin-left: 20px;
+    padding: 0px 20px;
     background-color: #21292B;
-    width:80%;
 }
 .slider-container {
     width: 50%;
@@ -174,9 +188,8 @@
     background-color: #BCF145;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
-    position: absolute;
+    position: relative;
     cursor: pointer;
-    right: -10px; 
 }
 
 .sliderAndInput .box{
@@ -224,12 +237,13 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
-.info-button:hover {
+.info-button:hover{
     border: 1px solid hsl(78, 86%, 71%);
 }
+
 .chart-container {
     width: 35%;
 }
@@ -247,25 +261,27 @@
     border-bottom-right-radius: 8px;
     position: relative;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 20px;
     margin-bottom: 8px;
     display: block;
     visibility: hidden;
+    transform: translateY(-10px);
     transition:visibility .5s ease;
 }
 .programming-stats {
     transform: translateY(15px);
     font-family: "Rubik", sans-serif;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     gap: 24px;
     margin: 70px auto;
     width:80%;
-    height:350px;
+    height:fit-content;
     box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    padding: 8px 32px 0px 32px;
+    padding: 25px 32px 25px 32px;
     color: white;
     transition: all 400ms ease;
     background-color: hsl(192, 25%, 7%);
@@ -288,11 +304,95 @@
     font-weight: bold;
 }
 .programming-stats .details #Investment{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 1.4rem;
     padding: 2px 10px;
 }
 .programming-stats .details #Gains{
     font-size: 1.5rem;
     padding: 2px 10px;
+}
+
+
+@media screen and (max-width: 938px) {
+    #card{
+        width: 100%;
+    }
+    .sliderAndInput{
+        justify-content: flex-end;
+    }
+    .slider-container{
+        flex-basis: 100%;
+    }
+    .slider-container .box{
+        margin: 30px 20px;
+    }
+    .topic{
+        width: max-content;
+        max-width: 60%;
+        transform: translate(5px, 30px);
+    }
+    #second, #third, #fourth{
+        margin: 10px 60px 0px 20px;
+        padding: 10px 0px;
+    }
+    .textCONTENT{
+        transform: translate(10px, 0px);
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #second, #third, #fourth{
+        margin: 10px 40px 0px 0px;
+        padding: 10px 0px;
+    }
+    .topic{
+        transform: translate(5px, 50px);
+    }
+    .topiccontainer{
+        transform: translateY(0px);
+        width: 100%;
+    }
+    .info{
+        font-size: 1rem;
+        width: min-content;
+    }
+    .infobtn{
+        align-items: center;
+        margin-left: 20px;
+        transform: translateY(0px);
+    }
+    .info-button{
+        margin-left: 0px;
+    }
+    .programming-stats .details{
+        flex-basis: 100%;
+    }
+    .programming-stats .chart-container{
+        width: 80%;
+    }
+
+
+    .sliderAndInput .box{
+        height: 40px;
+        width:150px;
+        transform: translateY(0px);
+    }
+    .sliderAndInput .box .slider-value {
+        width: 100px;
+        height: 34px;
+        font-size: 1.2rem;
+    }
+    .rupee{
+        height:40px;
+        width:40px;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .infobtn{
+        margin-left: 5px;
+    }
 }

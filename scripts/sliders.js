@@ -103,15 +103,15 @@ function addSliderEventListeners(sliderNum) {
     var sliderValue = document.getElementById("sliderValue" + sliderNum);
     var sliderContainer = document.querySelector(".slider-container");
 
-    sliderHandle.addEventListener("mousedown", function(event) {
+    function startDrag(event) {
         event.preventDefault();
-        var initialX = event.clientX;
+        var initialX = event.clientX || event.touches[0].clientX;
         var containerLeft = sliderContainer.getBoundingClientRect().left;
         var offset = initialX - sliderHandle.getBoundingClientRect().left;
 
-        function handleMouseMove(event) {
+        function moveHandle(event) {
             event.preventDefault();
-            var newX = event.clientX - containerLeft - offset;
+            var newX = (event.clientX || event.touches[0].clientX) - containerLeft - offset;
             if (newX < 0) {
                 newX = 0;
             } else if (newX > sliderContainer.offsetWidth) {
@@ -122,43 +122,50 @@ function addSliderEventListeners(sliderNum) {
             updateSliderValue(sliderNum);
         }
 
-        function handleMouseUp(event) {
+        function stopDrag(event) {
             event.preventDefault();
-            document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseup", handleMouseUp);
+            document.removeEventListener("mousemove", moveHandle);
+            document.removeEventListener("touchmove", moveHandle);
+            document.removeEventListener("mouseup", stopDrag);
+            document.removeEventListener("touchend", stopDrag);
 
             investAmt = document.getElementById("sliderValue1").value;
             timeperiod = document.getElementById("sliderValue2").value;
             edittable(investAmt, parseInt(timeperiod));
         }
 
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
-    });
+        document.addEventListener("mousemove", moveHandle);
+        document.addEventListener("touchmove", moveHandle);
+        document.addEventListener("mouseup", stopDrag);
+        document.addEventListener("touchend", stopDrag);
+    }
+
+    sliderHandle.addEventListener("mousedown", startDrag);
+    sliderHandle.addEventListener("touchstart", startDrag);
 
     sliderValue.addEventListener("change", function(event) {
-        var value = parseInt(String(sliderValue.value).replace(/,/g,''));
+        var value = parseInt(String(sliderValue.value).replace(/,/g, ''));
         if (isNaN(value)) return;
         if (value < 0) value = 0;
-        sliderValue.style.color="white";
-        try{
-            switch(sliderNum){
+        sliderValue.style.color = "white";
+        try {
+            switch (sliderNum) {
                 case 1:
                     if (value > 100000) value = 100000;
-                    if(value<500){
-                        sliderValue.style.color="red";
+                    if (value < 500) {
+                        sliderValue.style.color = "red";
                         throw new Error(`Value Of This Field Can't be Below 500 Rupees!`);
                     }
                     break;
                 case 2:
                     if (value > 50) value = 50;
-                    if(value==0){
-                        sliderValue.style.color="red";
+                    if (value == 0) {
+                        sliderValue.style.color = "red";
                         throw new Error(`Value Of This Field Can't be 0 Years!! Minimum 1 year!!`);
                     }
                     break;
             }
-        }catch(error){
+        } catch (error) {
             console.error(error);
             return;
         }
@@ -168,6 +175,7 @@ function addSliderEventListeners(sliderNum) {
         edittable(investAmt, parseInt(timeperiod));
     });
 }
+
 
 
 function creamypie(investAmt,ROI,n){

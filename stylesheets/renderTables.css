@@ -6,6 +6,7 @@ table{
     border-color: #0F1719;
     border-collapse: collapse;
 }
+
 th{
     position: relative;
     text-align: left;
@@ -41,4 +42,22 @@ td{
 .sort-icon.desc {
     border-color: transparent transparent #465919;
     transform: translateY(-50%) rotate(180deg);
+}
+
+@media screen and (max-width: 820px) {
+    table{
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+    table {
+        border-collapse: collapse;
+        border-style: hidden;
+    }
+    
+    table td{
+        border: 1px solid #0F1719;
+    }
 }

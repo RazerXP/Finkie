@@ -16,10 +16,21 @@
     <div class="navbar">
         <img class="fin" src="../assets/FINKIE.png">
         <div class="navbar-right"> 
-        <a href=".././index.html#tools">Tools</a>
-        <a href=".././index.html#essentials">Essentials</a>
-        <a href=".././index.html#blogs">Blogs</a>
-        <a href=".././index.html#aboutus">About us</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../index.html#essentials">Essentials</a>
+            <a href="../index.html#blogs">Blogs</a>
+            <a href="../index.html#aboutus">About us</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu" id="menu"> 
+          <a href="../index.html#tools">Tools</a>
+          <a href="../index.html#essentials">Essentials</a>
+          <a href="../index.html#blogs">Blogs</a>
+          <a href="../index.html#aboutus">About us</a>
         </div>
     </div>
     <center><div id="card" style="padding-bottom: 0px;">
@@ -44,9 +55,11 @@
                 </label>
             </div>
             <div id="second">
-                <div class="topic">
-                    <div class="info" id="Monthly-Investment-Amount">Monthly Investment Amount</div>
-                    <div class="info-button" id="info-button1">i</div>
+                <div class="topiccontainer">
+                    <div class="topic">
+                        <div class="info" id="Monthly-Investment-Amount">Monthly Investment Amount</div>
+                        <div class="infobtn"><div class="info-button" id="info-button1">i</div></div>
+                    </div>
                     <div class="textCONTENT" id="info-text1">The amount of money you want to invest monthly.</div>
                 </div>
                 <div class="sliderAndInput">
@@ -65,9 +78,11 @@
                 </div>
             </div>
             <div id="third">
-                <div class="topic">
-                    <div class="info">Time Period</div>
-                    <div class="info-button" id="info-button2">i</div>
+                <div class="topiccontainer">
+                    <div class="topic">
+                        <div class="info">Time Period</div>
+                        <div class="infobtn"><div class="info-button" id="info-button2">i</div></div>
+                    </div>
                     <div class="textCONTENT" id="info-text2">Time duration for which you want to save and invest your money.</div>
                 </div>
                 <div class="sliderAndInput">
@@ -86,9 +101,11 @@
                 </div>
             </div>
             <div id="fourth">
-                <div class="topic">
-                    <div class="info">Growth Rate</div>
-                    <div class="info-button" id="info-button3">i</div>
+                <div class="topiccontainer">
+                    <div class="topic">
+                        <div class="info">Growth Rate</div>
+                        <div class="infobtn"><div class="info-button" id="info-button3">i</div></div>
+                    </div>
                     <div class="textCONTENT" id="info-text3">Enter the annual expected returns on investments.</div>
                 </div>
                 <div class="sliderAndInput">
@@ -136,4 +153,13 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../scripts/sipCALC.js"></script>
+<script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+  
+      var menuIcon = document.querySelector('.menu-icon');
+      menuIcon.classList.toggle('active');
+    }
+  </script>
 </html>

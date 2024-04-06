@@ -17,10 +17,21 @@
     <div class="navbar">
         <img class="fin" src="../assets/FINKIE.png">
         <div class="navbar-right"> 
-            <a href=".././index.html#tools">Tools</a>
-            <a href=".././index.html#essentials">Essentials</a>
-            <a href=".././index.html#blogs">Blogs</a>
-            <a href=".././index.html#aboutus">About us</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../index.html#essentials">Essentials</a>
+            <a href="../index.html#blogs">Blogs</a>
+            <a href="../index.html#aboutus">About us</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu" id="menu"> 
+          <a href="../index.html#tools">Tools</a>
+          <a href="../index.html#essentials">Essentials</a>
+          <a href="../index.html#blogs">Blogs</a>
+          <a href="../index.html#aboutus">About us</a>
         </div>
     </div>
     <center>
@@ -38,7 +49,7 @@
                 </p>
             </div>
         </div>
-        <table id="csvTable" border="1px" style="width: 90%;"></table>   <!-- Table data will be dynamically added here -->
+        <table id="csvTable" border="1px"></table>   <!-- Table data will be dynamically added here -->
     </center>
     <div class="navbar2" style="margin-top: 30px;">
         <img class="fink" src="../assets/Group 6.png">
@@ -51,4 +62,13 @@
     </div>
 </body>
 <script src="../scripts/renderTables.js"></script>
+<script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+  
+      var menuIcon = document.querySelector('.menu-icon');
+      menuIcon.classList.toggle('active');
+    }
+  </script>
 </html>
