@@ -153,35 +153,47 @@ function addSliderEventListeners(sliderNum) {
         try {
             switch (sliderNum) {
                 case 1:
-                    if (value > 100000) value = 100000;
+                    var belu = value;
+                    if (value > 100000) {
+                        value = 100000;
+                    };
                     if (value < 500) {
                         sliderValue.style.color = "red";
                         throw new Error(`Value Of This Field Can't be Below 500 Rupees!`);
                     }
+                    updateSliderPosition(sliderNum, value);
+                    investAmt = Math.round(belu);
                     break;
                 case 2:
-                    if (value > 50) value = 50;
+                    var belu = value;
+                    if (value > 50) {
+                        value = 50;
+                    };
                     if (value == 0) {
                         sliderValue.style.color = "red";
                         throw new Error(`Value Of This Field Can't be 0 Years!! Minimum 1 year!!`);
                     }
+                    updateSliderPosition(sliderNum, value);
+                    n = Math.round(belu);
                     break;
                 case 3:
                     var belu = sliderValue.value;
                     belu = Number(belu);
-                    if (belu > 25) belu = 25;
+                    if (belu > 25) {
+                        value = 25;
+                    };
                     if (belu == 0) {
                         sliderValue.style.color = "red";
                         throw new Error(`Value Of This Growth Rate Can't be 0% !!`);
                     }
-                    value = belu;
+                    updateSliderPosition(sliderNum, value);
+                    ROI = Math.round(belu);
                     break;
             }
         } catch (error) {
             console.error(error);
             return;
         }
-        updateSliderPosition(sliderNum, value);
         const toggle = document.getElementById("toggle");
         if (toggle.checked) {
             lumpcumPie(investAmt, ROI, n);

@@ -151,27 +151,34 @@ function addSliderEventListeners(sliderNum) {
         try {
             switch (sliderNum) {
                 case 1:
-                    if (value > 100000) value = 100000;
+                    var belu = value;
+                    if (value > 100000) {
+                        value = 100000;
+                    };
                     if (value < 500) {
                         sliderValue.style.color = "red";
                         throw new Error(`Value Of This Field Can't be Below 500 Rupees!`);
                     }
+                    updateSliderPosition(sliderNum, value);
+                    investAmt = Math.round(belu);
                     break;
                 case 2:
-                    if (value > 50) value = 50;
+                    var belu = value;
+                    if (value > 50) {
+                        value = 50;
+                    };
                     if (value == 0) {
                         sliderValue.style.color = "red";
                         throw new Error(`Value Of This Field Can't be 0 Years!! Minimum 1 year!!`);
                     }
+                    updateSliderPosition(sliderNum, value);
+                    timeperiod = Math.round(belu);
                     break;
             }
         } catch (error) {
             console.error(error);
             return;
         }
-        updateSliderPosition(sliderNum, value);
-        investAmt = document.getElementById("sliderValue1").value;
-        timeperiod = document.getElementById("sliderValue2").value;
         edittable(investAmt, parseInt(timeperiod));
     });
 }

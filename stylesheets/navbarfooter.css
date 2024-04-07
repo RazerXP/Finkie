@@ -86,9 +86,11 @@ body{
     margin-bottom: 50px;
 
 }
+.logolink{
+  height: 52px;
+}
 
-
-.navbar a {
+.navbar-right a {
     float: left;
     display: block;
     color: white;
@@ -99,18 +101,18 @@ body{
     text-decoration: none;
 }
 
-.navbar a:hover {
+.navbar-right a:hover {
     background-color: #00000042;
     border-radius: 10px;
     width: fit-content;
     cursor:pointer;
 }
-.navbar a:active{
+.navbar-right a:active{
     background-color: #BCF145;
     color:#21292b;
     text-shadow: 0 0 10px #21292b;
 }
-.navbar a:focus{
+.navbar-right a:focus{
     background-color: #21292b;
     color:#BCF145;
     text-shadow: 0 0 10px #21292b;
@@ -127,7 +129,6 @@ body{
 }
 .fin{
     transform:scale(0.6);
-    top:1vh;
     padding-left: 100px;
 }
 
@@ -138,14 +139,14 @@ body{
     .fin{
         padding-left: 0px;
     }
-    .navbar a:hover {
+    .navbar-right a:hover {
         background-color: #00000042;
         color: aliceblue;
         border-radius: 10px;
         width: fit-content;
         cursor:pointer;
     }
-    .navbar a:active{
+    .navbar-right a:active{
         background-color: #00000042;
         color:#BCF145;
         text-shadow: 0 0 10px #21292b;

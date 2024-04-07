@@ -116,14 +116,15 @@ html{
   overflow: hidden;
   margin: 0px 20px 30px 20px;
   transition: transform 0.5s ease;
+  position: relative;
 }
 .card:hover, .viewmorebutt:hover{
   transform: scale(1.03); /* Increase size by 5% on hover */
   box-shadow: 0 8px 16px #0e1214; /* Add shadow on hover */
 }
 .card2:hover{
-    transform: scale(1.03); /* Increase size by 5% on hover */
-    box-shadow: 0 8px 16px hsl(192, 13%, 10%); /* Add shadow on hover */
+  transform: scale(1.03); /* Increase size by 5% on hover */
+  box-shadow: 0 8px 16px hsl(192, 13%, 10%); /* Add shadow on hover */
 }
 
 .card img {
@@ -202,13 +203,107 @@ html{
   font-size: 16px;
   cursor: pointer;
   width: 80%; /* Set button width to 100% of the container width minus padding */
+  height: 45px;
   position: relative;
   font-family: 'Lexend Regular', sans-serif;
   background-color: #21292b; /* Set background color for lower button */
   border: 3px solid #bcf145; /* Add border to lower button */
   color:#bcf145;
+  z-index: 5;
+  transform: translateY(0px);
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, color 0.5s ease-in, transform 0.5s ease-out; /* Add transition for smooth morphing */
+}
+.knowbutton.active {
+  transform: translateY(10px);
+  color: transparent;  
+  height: 45px;
+  width: 45px; /* Set width to match the height */
+  background-color: transparent; /* Set background color to transparent */
+  border: 3px solid #bcf145; /* Add border for the circle */
+  border-radius: 50%; /* Make button circular */
+  padding: 0.3cm; /* Remove horizontal padding */
+  position: relative; /* Ensure proper positioning of the cross sign */
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, transform 1s ease; /* Add transition for smooth morphing */
 }
 
+
+.knowbutton.active::before {
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Make the pseudo-element fill the circle */
+  height: 100%; /* Make the pseudo-element fill the circle */
+  border-radius: 50%; /* Make the pseudo-element circular */
+  border: 3px solid #bcf145; /* Add border for the circle */
+  z-index: -1; /* Ensure the pseudo-element is behind the cross sign */
+}
+
+.knowbutton.active::after {
+  content: '\00D7'; /* Cross sign character */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* Adjust font size of the cross sign */
+  color: #bcf145; /* Color of the cross sign */
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #21292B; /* Semi-transparent black background */
+  opacity: 0; /* Initially transparent */
+  visibility: hidden; /* Initially hidden */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: slideInOverlay 0.5s ease-in-out forwards; /* Apply slide-in animation */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  height: 60%;
+  background-color: #181E20;
+  color: #858585;
+  padding: 20px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  font-family: lexend;
+  max-width: 80%;
+  text-align: center;
+  font-size: 1em;
+}
+
+@keyframes slideInOverlay {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideOutOverlay {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+}
 
 .container2{
   display:flex;
@@ -284,6 +379,7 @@ html{
   font-family: 'Lexend Regular', sans-serif;
   font-size: 22px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .viewmore{

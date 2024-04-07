@@ -14,7 +14,7 @@
 <body style="background-color: #0F1719;">
 
     <div class="navbar">
-        <img class="fin" src="./assets/FINKIE.png">
+      <a href="./index.html#home" class="logolink"><img class="fin" src="./assets/FINKIE.png"></a>
         <div class="navbar-right"> 
             <a href="index.html#tools">Tools</a>
             <a href="index.html#essentials">Essentials</a>
@@ -36,7 +36,7 @@
 
     <div class="container2">
               <!--BANNER-->
-      <div class="banner">
+      <div class="banner" id="home">
         <p style="font-size: smaller; color: white;">Banner goes here.</p>
       </div>
 
@@ -54,31 +54,56 @@
       <div class="container">
         <!-- Cards -->
         <div class="card">
-            <img src="./assets/lumpsum.png" alt="Placeholder Image">
-            <div class="cardcontent">
-              <div class="button-container">
-                <button class="calcbutton" onclick="window.location.href='./pages/sipCALC.html'">Calculate Now</button>
-                <button class="knowbutton">Know more</button>
+          <img src="./assets/lumpsum.png" alt="Placeholder Image">
+          <div class="cardcontent">
+            <div class="button-container">
+              <button class="calcbutton" onclick="window.location.href='./pages/sipCALC.html'">Calculate Now</button>
+              <button class="knowbutton" id="knowbutton1" onclick="toggleOverlay(1)">Know more</button>
             </div>
+          </div>
+          <div id="overlay1" class="overlay">
+            <div id="overlay-content1" class="overlay-content">
+              SIP involves regular fixed investments, often monthly, averaging investment 
+              costs over time to mitigate market volatility. Lumpsum entails a one-time 
+              investment of a large sum, offering potential for higher returns but higher 
+              risk. Both aid in achieving financial goals through strategic investment planning.
             </div>
+          </div>
         </div>
         <div class="card">
             <img src="./assets/incometax3.png" alt="Placeholder Image">
             <div class="cardcontent">
               <div class="button-container">
                 <button class="calcbutton">Calculate Now</button>
-                <button class="knowbutton">Know More</button>
-              </div>
+                <button class="knowbutton" id="knowbutton2" onclick="toggleOverlay(2)">Know more</button>
             </div>
+          </div>
+          <div id="overlay2" class="overlay">
+            <div id="overlay-content2" class="overlay-content">
+              The income tax calculator aids in determining tax obligations by 
+              assessing income, deductions, and credits. It ensures compliance 
+              with tax regulations while identifying potential savings. This tool 
+              serves as a valuable resource for individuals seeking to manage their 
+              tax liabilities effectively and efficiently.
+            </div>
+          </div>
         </div>
         <div class="card">
-            <img src="./assets/investment.png" alt="Placeholder Image">
-            <div class="cardcontent">
-              <div class="button-container">
-                <button class="calcbutton" onclick="window.location.href='./pages/investmentCALC.html'">Calculate Now</button>
-                <button class="knowbutton">Know More</button>
-              </div>
+          <img src="./assets/investment.png" alt="Placeholder Image">
+          <div class="cardcontent">
+            <div class="button-container">
+              <button class="calcbutton" onclick="window.location.href='./pages/investmentCALC.html'">Calculate Now</button>
+              <button class="knowbutton" id="knowbutton3" onclick="toggleOverlay(3)">Know more</button>
             </div>
+          </div>
+          <div id="overlay3" class="overlay">
+            <div id="overlay-content3" class="overlay-content">
+              The investment calculator compares various investment options available 
+              in India, analyzing their returns, risks, and other factors. It aids 
+              users in making informed decisions, optimizing their investment portfolio 
+              for achieving financial goals effectively.
+            </div>
+          </div>
         </div>
       </div>  
     </div>  
@@ -101,13 +126,13 @@
             <div class="card2"  onclick="window.location.href='./pages/FDratespage.html'">
               <img src="./assets/fdrates.png" alt="Placeholder Image">
               <div class="card2-content">
-                  <p>FD RATES</p>
+                  <p>Fixed Deposit Rates</p>
               </div>
             </div>
             <div class="card2" onclick="window.location.href='./pages/MFroipage.html'">
               <img src="./assets/mfrates.png" alt="Placeholder Image">
               <div class="card2-content">
-                  <p>MF RATES</p>
+                  <p>Mutual Fund Returns</p>
               </div>
             </div>
           </div>
@@ -164,5 +189,27 @@
     var menuIcon = document.querySelector('.menu-icon');
     menuIcon.classList.toggle('active');
   }
+
+  function toggleOverlay(num) {
+  var overlay = document.getElementById("overlay"+`${num}`);
+  var overlayContent = document.getElementById("overlay-content"+`${num}`);
+  var btn = document.getElementById("knowbutton"+`${num}`);
+
+  if (overlay.style.opacity == 0) {
+    // Show the overlay
+    overlay.style.visibility = "visible";
+    overlay.style.opacity = 1;
+    overlayContent.style.animation = "slideInOverlay 0.5s ease-in-out forwards";
+    btn.classList.toggle('active');
+  } else {
+    // Hide the overlay with slide-out animation
+    overlay.style.opacity = 0;
+    overlayContent.style.animation = "slideOutOverlay 0.5s ease-in-out forwards";
+    setTimeout(function() {
+      overlay.style.visibility = "hidden";
+    }, 500); // Hide overlay after animation completes
+    btn.classList.toggle('active');
+  }
+}
 </script>
 </html>

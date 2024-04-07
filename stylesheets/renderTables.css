@@ -48,7 +48,7 @@ td{
     table{
         display: block;
         overflow-x: auto;
-        width: 100%;
+        width: calc(100% - 20px);
         border-radius: 5px;
         font-size: 0.8rem;
     }
