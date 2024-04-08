@@ -9,6 +9,10 @@ function SipToLumpsum(){
     }else{
         info.textContent="Monthly Investment Amount";
     }
+
+    document.getElementById("sliderHandle2").classList.remove("sideslide-in-rev2");
+    document.getElementById("sliderHandle2").classList.add("sideslide-in-rev2");
+
     investAmt = document.getElementById("sliderValue1").value;
     timeperiod = document.getElementById("sliderValue2").value;
     edittable(investAmt, parseInt(timeperiod));
@@ -199,7 +203,7 @@ function lumpcumypie(investAmt,ROI,n){
 }
 
 for (var i = 1; i <= 2; i++) {
-    if(i==1) updateSliderPosition(i, 10);
+    if(i==1) updateSliderPosition(i, 5000);
     if(i==2) updateSliderPosition(i, 10);
     updateSliderValue(i);
     addSliderEventListeners(i);

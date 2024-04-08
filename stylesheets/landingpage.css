@@ -104,6 +104,7 @@ html{
   color: #858585;
 }
 
+
 .card {
   width: calc(33.33% - 20px);
   width: 25%;
@@ -115,15 +116,15 @@ html{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 0px 20px 30px 20px;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, scale 0.5s ease;
   position: relative;
 }
 .card:hover, .viewmorebutt:hover{
-  transform: scale(1.03); /* Increase size by 5% on hover */
+  scale: 1.03; /* Increase size by 5% on hover */
   box-shadow: 0 8px 16px #0e1214; /* Add shadow on hover */
 }
 .card2:hover{
-  transform: scale(1.03); /* Increase size by 5% on hover */
+  scale: 1.03; /* Increase size by 5% on hover */
   box-shadow: 0 8px 16px hsl(192, 13%, 10%); /* Add shadow on hover */
 }
 
@@ -274,14 +275,13 @@ html{
   border-radius: 40px;
   height: 60%;
   background-color: #181E20;
-  color: #858585;
+  color: #BCF145;
   padding: 20px;
   margin: 20px 0px;
   border-radius: 10px;
   font-family: lexend;
   max-width: 80%;
   text-align: center;
-  font-size: 1em;
 }
 
 @keyframes slideInOverlay {
@@ -348,7 +348,7 @@ html{
   color: #858585;
 }
 .card2 {
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, scale 0.5s ease;
   width: 30%;
   height: fit-content;
   margin-bottom: 30px;
@@ -389,7 +389,7 @@ html{
 }
 
 .viewmorebutt{
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, scale 0.3s ease;
   color:#0f1719;
   background-color:#BCF145;
   border: none;
