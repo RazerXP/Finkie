@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finkie</title>
+<link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/aboutus.css">
+<link href="../stylesheets/navbarfooter.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="../index.html#home" class="logolink"><img class="fin" src="../assets/FINKIE.png"></a>
+    <div class="navbar-right"> 
+        <a href="../index.html#tools">Tools</a>
+        <a href="../index.html#essentials">Essentials</a>
+        <a href="../index.html#blogs">Blogs</a>
+        <a href="./aboutus.html">About us</a>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    </div>
+    <div class="menu" id="menu"> 
+    <a href="../index.html#tools">Tools</a>
+    <a href="../index.html#essentials">Essentials</a>
+    <a href="../index.html#blogs">Blogs</a>
+    <a href="../index.html#aboutus">About us</a>
+    </div>
+</div>
+
+<h1 class="title"><span>ABOUT</span> US</h1>
+<p class="subtitle">Explore the developers who designed and built this website</p>
+
+<div class="card-container">
+    <div class="card">
+        <img src="../assets/ritamde.jpg" alt="Profile Photo">
+        <div class="info">
+            <h2>Ritam De</h2>
+            <h3>Fullstack Dev</h3>
+        </div>
+        <div class="description">
+            <p>
+                Hello, I'm the full-stack guy, hustling on both ends. From frontend finesse to backend mastery, I'm all about bringing projects to life. Super proud of our team's tag-teaming effort.
+            </p>
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/ritam-de-563590274/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ritamde25/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/RazerXP" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="../assets/ritambisauce.jpg" alt="Profile Photo">
+        <div class="info">
+            <h2>Ritam Biswas</h2>
+            <h3>UX / UI </h3>
+        </div>
+        <div class="description">
+            <p>Yo, namaste! I'm the UI designer always in the creative flow. Whether it's wireframing or polishing designs in Figma, I'm all in. Stoked to be on a team where we're all about making interfaces pop!</p>
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/ritam-biswas-197138286/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/_ritam_here/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/RITAMBISWAS404" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="../assets/segnik.jpg" alt="Profile Photo">
+        <div class="info">
+            <h2>Sagnik Ghosh</h2>
+            <h3>Frontend Dev</h3>
+        </div>
+        <div class="description">
+            <p>Hi! I'm the frontend whiz, always tinkering with code. Whether it's crafting sleek interfaces or adding that extra flair with CSS, I'm on it. Excited to be part of a team where we're all about making the web shine!</p>
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/sagnik-ghosh-398191238/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/deep_sagnik_ghosh/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/sagnik1552003" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="../assets/sanu.jpeg" alt="Profile Photo">
+        <div class="info">
+            <h2>Sanu Mukherjee</h2>
+            <h3>Fullstack Dev</h3>
+        </div>
+        <div class="description">
+            <p>Hey there! I'm a full-stack dev who thrives on the grind. With endless hours of coding, I bring ideas to life from front-end to back-end. Proud to be part of a team that hustles hard to create awesome digital experiences!</p>
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/sanu-mukherjee-9085a227b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/_the_cosmos_rocky_1001/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/sanu1001" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="navbar2">
+    <img class="fink" src="../assets/Group 6.png">
+    <div class="navbar-right2">
+        <a href="#PRIVACY">PRIVACY POLICY</a>
+        <a href="#USER">USER AGREEMENT</a>
+        <a href="#SUPPORT">SUPPORT</a>
+        <a class="TEAM" href="#TEAM">TEAM</a>
+    </div>
+</div>
+
+</body>
+
+<script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+  
+      var menuIcon = document.querySelector('.menu-icon');
+      menuIcon.classList.toggle('active');
+    }
+  </script>
+
+</html>

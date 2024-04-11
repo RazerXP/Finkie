@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-color: #0F1719;
+}
+
+.title {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Lexend Medium', sans-serif;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.title span {
+    color: #BCF145;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 21px;
+    font-family: 'Lexend Regular', sans-serif;
+    margin-bottom: 70px;
+    color: #858585;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px #0e1214;
+}
+
+.card .icons :hover {
+    transform: scale(1.25);
+}
+
+.card {
+    transition: transform 0.5s ease;
+    width: 40%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    background-color: #21292B;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.card .info {
+    float: left;
+}
+
+.card .info h2{
+    font-family: 'Lexend Medium', sans-serif;
+    margin: 10px;
+    font-size: 30px;
+    color: #BCF145;
+}
+.card .info h3{
+    font-family: 'Lexend Medium', sans-serif;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.card .description {
+    clear: both;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.card .description p {
+    font-family: 'Lexend Medium', sans-serif;
+    font-size: 21px;
+    color: #858585;
+}
+
+.card .icons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.card .icons a {
+    text-decoration: none;
+}
+
+.card .icons i {
+    transition: transform 0.5s ease;
+    margin: 0 10px;
+    font-size: 30px;
+    color: #BCF145;
+}
+
+@media (max-width: 1110px) {
+    .card{
+        width: 90%;
+    }
+}
+  
+@media (max-width: 576px) {
+    .card{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .info{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .card img{
+        margin-right: 0;
+    }
+    .description{
+        text-align: center;
+    }
+}
