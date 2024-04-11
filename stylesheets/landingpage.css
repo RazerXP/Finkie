@@ -380,12 +380,12 @@ html{
 
 
 .card2-content {
-  padding: 5px; 
+  padding: 5px 20px; 
   color: #fff;
-  font-family: 'Lexend Regular', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 22px;
   margin-bottom: 10px;
-  text-align: center;
+  width: fit-content;
 }
 
 .viewmore{
