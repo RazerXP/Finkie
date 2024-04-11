@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb9.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>Exploring Alternative Investments: Diversifying Your Portfolio for Growth</h1>
+        <p>Diversification is a cornerstone of successful investing, and alternative investments offer unique opportunities for portfolio diversification and growth. In this blog, we explore various alternative investment options and their potential benefits.<br><br><br><br>
+            
+            Understanding Alternative Investments:<br><br>
+            Alternative investments are non-traditional assets that differ from traditional investments like stocks, bonds, and cash. They include a wide range of asset classes such as real estate, commodities, hedge funds, private equity, and cryptocurrencies.<br><br><br><br>
+            
+            Real Estate Investment:<br><br>
+            Real estate investment involves purchasing, owning, and managing properties for rental income or capital appreciation. Real estate offers diversification, income generation, and potential tax benefits.<br><br><br><br>
+            
+            Commodities:<br><br>
+            Commodities are physical goods such as gold, silver, oil, or agricultural products that can be traded on commodity exchanges. Investing in commodities provides a hedge against inflation and market volatility, as well as diversification benefits.<br><br><br><br>
+            
+            Hedge Funds:<br><br>
+            Hedge funds are investment funds that employ various strategies to generate returns for investors. Hedge funds often use leverage, derivatives, and alternative investment strategies to achieve their objectives. They offer potential for higher returns but also come with higher risks and fees.<br><br><br><br>
+            
+            Private Equity:<br><br>
+            Private equity involves investing in privately-held companies or assets that are not publicly traded. Private equity investments can offer attractive returns, portfolio diversification, and opportunities for active management and value creation.<br><br><br><br>
+            
+            Cryptocurrencies:<br><br>
+            Cryptocurrencies are digital or virtual currencies that use cryptography for security and operate on decentralized networks. Investing in cryptocurrencies provides exposure to a rapidly evolving asset class with the potential for high returns but also significant volatility and risk.<br><br><br><br>
+            
+            Due Diligence and Risk Management:<br><br>
+            Before investing in alternative assets, conduct thorough due diligence and risk analysis to understand the investment's potential risks and rewards. Consider factors such as liquidity, volatility, fees, and regulatory considerations.<br><br><br><br>
+            
+            Conclusion:<br><br>
+            Alternative investments offer unique opportunities for portfolio diversification and growth. By understanding various alternative investment options, conducting due diligence, and incorporating alternative investments into a well-diversified portfolio, investors can enhance risk-adjusted returns and achieve their long-term financial goals.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

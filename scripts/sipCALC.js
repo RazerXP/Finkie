@@ -44,7 +44,7 @@ function updateSliderPosition(sliderNum, value) {
             n=Math.round(value);
             break;
         case 3:
-            var newX = (containerWidth * value) / 25.0;
+            var newX = (containerWidth * value) / 25.00;
             progressBar.style.width = newX + "px";
             sliderHandle.style.left = newX + "px";
             if(value<=1) value=1;
@@ -179,6 +179,7 @@ function addSliderEventListeners(sliderNum) {
                 case 3:
                     var belu = sliderValue.value;
                     belu = Number(belu);
+                    console.log(belu);
                     if (belu > 25) {
                         value = 25;
                     };
@@ -187,7 +188,7 @@ function addSliderEventListeners(sliderNum) {
                         throw new Error(`Value Of This Growth Rate Can't be 0% !!`);
                     }
                     updateSliderPosition(sliderNum, value);
-                    ROI = Math.round(belu);
+                    ROI = belu;
                     break;
             }
         } catch (error) {

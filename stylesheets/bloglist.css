@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    background-color: #0F1719;
+}
+
+a{
+  text-decoration: none;
+}
+
+.blogpage {
+    max-width: 1200px;
+    margin: 0px auto 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height:fit-content;
+  }
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Lexend Medium', sans-serif;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.title span {
+    color: #BCF145;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 21px;
+    font-family: 'Lexend Regular', sans-serif;
+    margin-bottom: 100px;
+    color: #858585;
+    padding: 0px 40px;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    width: 25%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background: #21292B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0px 20px 30px 20px;
+    transition: transform 0.5s ease, scale 0.5s ease;
+    position: relative;
+}
+
+.card img {
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.card-content {
+    text-decoration:none;
+    padding: 35px; /* Gap between text and image */
+    padding-top: 0px;
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 17px; /* Font size */
+}
+.card-content div{
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #BCF145;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+
+.card:hover {
+  transform: scale(1.03); /* Increase size by 5% on hover */
+  box-shadow: 0 8px 16px #0e1214; /* Add shadow on hover */
+}
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb5.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>The Power of Compound Interest: How to Harness its Benefits for Wealth Accumulation</h1>
+        <p>Compound interest is a powerful force that can significantly impact your long-term financial goals. In this blog post, we'll explore the concept of compound interest, its benefits, and how you can leverage it to accelerate wealth accumulation.<br><br><br><br>
+            Understanding Compound Interest:<br><br>
+            Compound interest is the process of earning interest on both the initial principal and the accumulated interest from previous periods. This compounding effect leads to exponential growth of your savings or investments over time.<br><br><br><br>
+            
+            Starting Early and Consistent Saving:<br><br>
+            The key to maximizing the benefits of compound interest is to start investing early and contribute consistently to your savings. Even small contributions made regularly can grow substantially over time due to the power of compounding.<br><br><br><br>
+            
+            Reinvesting Dividends and Interest:<br><br>
+            Instead of withdrawing dividends and interest payments, reinvest them back into your investments to take advantage of compound growth. This allows your money to grow at an accelerated rate, leading to greater wealth accumulation over time.<br><br><br><br>
+            
+            Staying Invested for the Long Term:<br><br>
+            Compound interest works best over long time horizons, so it's essential to stay invested for the long term. Avoid withdrawing your investments prematurely and focus on maintaining a disciplined approach to investing.<br><br><br><br>
+            
+            Maximizing Contributions:<br><br>
+            Maximize your contributions to retirement accounts and other investment vehicles to take full advantage of compound interest. By contributing regularly and maximizing your contributions, you can supercharge your wealth accumulation efforts.<br><br><br><br>
+            
+            Benefit from Tax-Advantaged Accounts:<br><br>
+            Investing in tax-advantaged accounts such as IRAs and 401(k)s can turbocharge the power of compound interest. These accounts offer tax-deferred or tax-free growth, allowing your investments to compound more efficiently over time.<br><br><br><br>
+            
+            Conclusion:<br><br>
+            Compound interest is a powerful wealth-building tool that can help you achieve your financial goals faster. By starting early, contributing consistently, reinvesting dividends and interest, staying invested for the long term, maximizing contributions, and leveraging tax-advantaged accounts, you can harness the full potential of compound interest and accelerate your journey to financial independence.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

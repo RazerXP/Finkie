@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb6.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>Demystifying Stock Market Jargon: A Beginner's Guide to Key Terms</h1>
+        <p>The stock market can be overwhelming for beginners due to the plethora of unfamiliar terms. In this blog, we'll simplify complex jargon, providing newcomers with a solid understanding of essential stock market terminology.<br><br><br><br>
+            
+            Stock:<br><br>
+            Stocks signify ownership in a company, granting shareholders rights to a portion of the company's assets and earnings. These securities are traded on various exchanges such as the New York Stock Exchange (NYSE) or the Nasdaq, where investors buy and sell shares based on market demand and company performance.<br><br><br><br>
+            
+            Dividend:<br><br>
+            Dividends are distributions of a company's profits paid to shareholders as a reward for their investment. Typically distributed quarterly, dividends provide investors with a steady income stream, offering both stability and potential growth through reinvestment.<br><br><br><br>
+            
+            Market Capitalization:<br><br>
+            Market capitalization, often referred to as market cap, quantifies a company's total value in the stock market. It's calculated by multiplying the current share price by the total number of outstanding shares, serving as a key indicator of a company's size and financial health.<br><br><br><br>
+            
+            Index:<br><br>
+            Indexes are benchmarks that track the performance of a group of stocks, providing insights into overall market trends and investor sentiment. Commonly used indexes such as the S&P 500 or Dow Jones Industrial Average offer a snapshot of the market's performance and serve as a reference point for investors and financial professionals.<br><br><br><br>
+            
+            Bull Market:<br><br>
+            A bull market is a prolonged period of rising stock prices and positive investor sentiment. During bull markets, optimism prevails, driving increased buying activity and fostering confidence in the economy and financial markets.<br><br><br><br>
+            
+            Bear Market:<br><br>
+            Conversely, a bear market is characterized by a sustained decline in stock prices and negative investor sentiment. Bear markets are often accompanied by economic downturns, falling corporate profits, and heightened uncertainty, leading to widespread caution among investors.
+            <br><br><br><br>
+            Conclusion:<br><br>
+            Understanding key stock market terms is vital for beginners embarking on their investment journey. By demystifying terms like stocks, dividends, market capitalization, indexes, bull markets, and bear markets, newcomers can navigate the stock market with confidence and make informed investment decisions.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

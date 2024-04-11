@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb4.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>Retirement Planning Demystified: Building a Secure Financial Future</h1>
+        <p>Planning for retirement is essential for ensuring financial security in your golden years. In this blog post, we'll simplify the retirement planning process, providing practical tips and strategies to help you build a secure financial future.<br><br><br><br>
+            
+            Setting Retirement Goals:<br><br>
+            Start by defining your retirement goals, including your desired lifestyle, retirement age, and estimated expenses. Understanding your goals will help you determine how much you need to save and invest for retirement.<br><br><br><br>
+            
+            Calculate Retirement Needs:<br><br>
+            Estimate your retirement expenses by considering factors such as housing, healthcare, daily living expenses, and leisure activities. Use retirement calculators or consult with a financial advisor to gauge your financial needs accurately.<br><br><br><br>
+            
+            Starting Early and Consistent Saving:<br><br>
+            Start saving for retirement as early as possible and contribute consistently to retirement accounts such as 401(k)s, IRAs, or other retirement savings vehicles. Time is your greatest asset when it comes to retirement planning, so make the most of it by starting early.<br><br><br><br>
+            
+            Maximizing Retirement Contributions:<br><br>
+            Take advantage of employer-sponsored retirement plans and maximize your contributions to benefit from employer matches and tax advantages. Consider contributing the maximum allowable amount each year to accelerate your retirement savings.<br><br><br><br>
+            
+            Diversifying Investments:<br><br>
+            Diversification is key to reducing risk and maximizing returns in your retirement portfolio. Spread your investments across different asset classes such as stocks, bonds, and real estate to mitigate market volatility and optimize long-term growth potential.<br><br><br><br>
+            
+            Regularly Reviewing and Adjusting:<br><br>
+            Regularly review your retirement plan and make adjustments as needed based on changes in your financial situation, investment performance, and retirement goals. Rebalance your portfolio periodically to ensure it remains aligned with your risk tolerance and time horizon.<br><br><br><br>
+            
+            Conclusion:<br><br>
+            Retirement planning doesn't have to be daunting. By understanding your retirement goals, estimating your financial needs, starting early, maximizing contributions, diversifying investments, and regularly reviewing your plan, you can build a secure financial future for your retirement years. Remember, the key to successful retirement planning is taking action and staying committed to your goals.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

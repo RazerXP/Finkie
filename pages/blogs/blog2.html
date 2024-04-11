@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb2.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>Cryptocurrency 101: Understanding the Basics of Digital Assets</h1>
+        <p>Cryptocurrency has emerged as a disruptive force in the financial world, captivating the imagination of investors and technologists alike. In this blog post, we'll delve into the fundamentals of cryptocurrency, shedding light on its origins, underlying technology, and potential implications for the future of finance.<br><br><br><br>
+            
+            What is Cryptocurrency?<br><br>
+            Cryptocurrency is a form of digital or virtual currency that uses cryptography for security and operates on decentralized networks known as blockchain. Unlike traditional fiat currencies, cryptocurrencies are not issued or controlled by any central authority such as a government or financial institution. They enable secure peer-to-peer transactions and offer transparency through blockchain technology.<br><br><br><br>
+            
+            Blockchain Technology<br><br>
+            At the heart of cryptocurrency is blockchain technology, a distributed ledger system that records all transactions across a network of computers. Each transaction is encrypted and linked to the previous one, creating a tamper-proof record of ownership and transaction history. Blockchain ensures transparency, immutability, and security, making it the backbone of cryptocurrencies like Bitcoin and Ethereum.
+            <br><br><br><br>
+            Types of Cryptocurrencies<br><br>
+            Bitcoin, the first and most well-known cryptocurrency, paved the way for thousands of alternative cryptocurrencies known as altcoins. Examples include Ethereum, Ripple, Litecoin, and many others, each with its own unique features and use cases. While Bitcoin serves primarily as digital gold and a store of value, altcoins often have specific utility functions within their respective blockchain networks.
+            <br><br><br><br>
+            How Cryptocurrency Works<br><br>
+            Cryptocurrencies are created through a process called mining, where participants use powerful computers to solve complex mathematical puzzles and validate transactions on the blockchain. In return, miners are rewarded with newly created coins or transaction fees. Cryptocurrency transactions are processed and confirmed on the blockchain, ensuring trust and decentralization without the need for intermediaries like banks.
+            <br><br><br><br>
+            Potential Benefits and Risks<br><br>
+            Proponents of cryptocurrency tout its potential to revolutionize finance by offering greater financial inclusion, transparency, and security. Cryptocurrencies can facilitate cross-border transactions, provide financial access to the unbanked, and protect against inflation. However, skeptics raise concerns about its volatility, regulatory uncertainty, and potential for misuse in illegal activities. Price fluctuations, security vulnerabilities, and regulatory challenges are factors investors should consider when entering the cryptocurrency market.
+            <br><br><br><br>
+            Conclusion:<br><br>
+            Cryptocurrency represents a fascinating intersection of finance and technology, with the potential to reshape the way we think about money and value exchange. While the future of cryptocurrency remains uncertain, understanding its basics is essential for anyone looking to explore this rapidly evolving space. With further adoption, innovation, and regulatory clarity, cryptocurrencies could play a significant role in the future of finance.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

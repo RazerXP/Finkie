@@ -1,0 +1,92 @@
+body{
+  background-color: #0F1719;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px; /* Default padding for desktop */
+}
+
+.rounded-image {
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  width: 98.5vw; /* Stretch image to full width */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin-bottom: 20px; /* Added margin to separate image from text */
+}
+
+.content {
+  padding: 50px;
+  font: 'lexend';
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center; /* Center content horizontally */
+}
+
+h1 {
+  font-family: 'Lexend Medium', sans-serif;
+  color: #BCF145;
+}
+
+p {
+  font-family: 'Lexend', sans-serif;
+  color: #ffffff;
+}
+
+h1, p {
+  padding: 0 150px; /* Default padding for desktop */
+}
+
+p span {
+  color: #BCF145;
+}
+
+.custom-button {
+  display: inline-flex;
+  height: 74px;
+  padding: 0px 75px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Change this value to adjust the gap */
+  flex-shrink: 0;
+  border-radius: 52px;
+  border: 3px solid var(--brand, #BCF145);
+  background-color: transparent; /* Set to your desired background color */
+  color: var(--brand, #BCF145); /* Set to your desired text color */
+  font-size: 16px; /* Adjust as needed */
+  font-weight: bold; /* Adjust as needed */
+  text-transform: uppercase; /* Adjust as needed */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-left: auto; /* Align button to the right */
+  margin-top: 50px;
+}
+
+.custom-button:hover {
+  background-color: var(--brand, #BCF145); /* Change to hover background color */
+  color: #0F1719; /* Change to hover text color */
+}
+
+/* Media Query for Smartphones */
+@media only screen and (max-width: 1000px) {
+  .container, h1, p {
+      padding: 0; /* No padding for smartphones */
+  }
+
+  .custom-button {
+      margin-top: 50px; /* Adjusted margin top for smartphones */
+  }
+}
+

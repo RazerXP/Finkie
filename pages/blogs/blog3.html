@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb3.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>The Rise of ESG Investing: Integrating Environmental, Social, and Governance Factors</h1>
+        <p>ESG (Environmental, Social, and Governance) investing has gained significant traction in recent years, as investors increasingly seek to align their financial goals with their values. In this blog post, we'll explore the principles of ESG investing, its growing importance in the financial industry, and how investors can incorporate ESG considerations into their portfolios.<br><br><br><br>
+            
+            Understanding ESG Factors:<br><br>
+            ESG investing involves evaluating companies based on their environmental impact (E), social responsibility (S), and corporate governance practices (G). Companies with strong ESG performance are believed to be better positioned for long-term sustainability and resilience. Investors consider factors such as carbon emissions, workplace diversity, and board diversity when assessing ESG criteria.<br><br><br><br>
+            
+            The Importance of ESG:<br><br>
+            Beyond traditional financial metrics, ESG factors can provide valuable insights into a company's risk profile, reputation, and potential for long-term value creation. By considering ESG criteria, investors can identify opportunities and mitigate risks associated with environmental, social, and governance issues. ESG integration can lead to more informed investment decisions and positive societal impact.<br><br><br><br>
+            
+            ESG Integration Strategies:<br><br>
+            There are several approaches to integrating ESG considerations into investment decision-making. These may include negative screening (excluding companies involved in controversial activities), positive screening (selecting companies with strong ESG performance), and thematic investing (targeting specific ESG themes such as renewable energy or gender diversity). ESG integration can be customized based on investor preferences and objectives.<br><br><br><br>
+            
+            Measuring ESG Performance:<br><br>
+            Various tools and frameworks exist to assess and compare companies' ESG performance, such as the Dow Jones Sustainability Index, MSCI ESG Ratings, and the Carbon Disclosure Project (CDP). These tools provide investors with standardized metrics and benchmarks to evaluate ESG factors across industries and regions. ESG ratings and scores enable investors to identify ESG leaders and laggards within their investment universe.<br><br><br><br>
+            
+            The Business Case for ESG:<br><br>
+            Increasingly, there is evidence to suggest that companies with strong ESG credentials may outperform their peers over the long term. Studies have shown correlations between high ESG scores and financial performance, including lower volatility, higher profitability, and better risk management. As investors prioritize sustainability and corporate responsibility, companies that embrace ESG principles may benefit from enhanced investor interest and market competitiveness.
+            <br><br><br><br>
+            Conclusion:<br><br>
+            ESG investing represents a paradigm shift in the way investors evaluate companies and allocate capital, moving beyond purely financial considerations to incorporate broader environmental, social, and governance factors. As ESG considerations continue to gain prominence in the investment landscape, understanding and integrating ESG principles into investment strategies can lead to more sustainable and resilient portfolios. By aligning financial objectives with environmental and societal goals, investors can contribute to positive change while seeking competitive returns.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picture with Rounded Edges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #0F1719; /* Set background color to #0F1719 */
+    color: #FFF; /* Set text color to white */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px; /* Default padding for desktop */
+  }
+
+  .rounded-image {
+    border-radius: 40px;
+    width: 95vw; /* Stretch image to full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Added margin to separate image from text */
+  }
+
+  .content {
+    padding: 50px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center; /* Center content horizontally */
+  }
+
+  h1 {
+    font-family: 'Lexend Medium', sans-serif;
+    color: #BCF145;
+  }
+
+  p {
+    font-family: 'Lexend Regular', sans-serif;
+    color: #ffffff;
+  }
+
+  h1, p {
+    padding: 0 150px; /* Default padding for desktop */
+  }
+
+  .custom-button {
+    display: inline-flex;
+    height: 74px;
+    padding: 22px 92.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Change this value to adjust the gap */
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 3px solid var(--brand, #BCF145);
+    background-color: transparent; /* Set to your desired background color */
+    color: var(--brand, #BCF145); /* Set to your desired text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    text-transform: uppercase; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Align button to the right */
+    margin-top: 50px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--brand, #BCF145); /* Change to hover background color */
+    color: #0F1719; /* Change to hover text color */
+  }
+
+  /* Media Query for Smartphones */
+  @media only screen and (max-width: 1000px) {
+    .container, h1, p {
+        padding: 0; /* No padding for smartphones */
+    }
+
+    .custom-button {
+        margin-top: 50px; /* Adjusted margin top for smartphones */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="rounded-image" src="bb7.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>Exploring Real Estate Investment: Strategies for Building Wealth</h1>
+        <p>Real estate investment offers lucrative opportunities for wealth accumulation. In this blog, we delve into various strategies for navigating the real estate market and building long-term wealth through property investments.<br><br><br><br>
+
+            Understanding Real Estate Investment:<br><br>
+            Real estate investment involves purchasing, owning, and managing properties with the aim of generating income and/or capital appreciation. It encompasses various strategies, including rental properties, fix-and-flip, and real estate investment trusts (REITs).<br><br><br><br>
+            
+            Rental Properties:<br><br>
+            Investing in rental properties involves purchasing residential or commercial properties and leasing them to tenants in exchange for rental income. Rental properties offer steady cash flow and the potential for long-term appreciation.<br><br><br><br>
+            
+            Fix-and-Flip:<br><br>
+            Fix-and-flip involves purchasing distressed properties, renovating them, and selling them for a profit. This strategy requires careful market analysis, renovation management, and a solid exit plan to maximize returns.<br><br><br><br>
+            
+            Real Estate Investment Trusts (REITs):<br><br>
+            REITs are companies that own, operate, or finance income-generating real estate properties. Investing in REITs provides exposure to the real estate market without the hassle of property ownership. REITs offer diversification, liquidity, and passive income through dividends.
+            <br><br><br><br>
+            Due Diligence and Market Analysis:<br><br>
+            Before investing in real estate, conduct thorough due diligence and market analysis. Evaluate property fundamentals, market trends, rental demand, and potential risks to make informed investment decisions.<br><br><br><br>
+            
+            Financing Options and Leverage:<br><br>
+            Explore financing options such as mortgages, private loans, or partnerships to leverage your capital and expand your real estate portfolio. Understand the risks and benefits of leverage to optimize returns and mitigate financial risks.<br><br><br><br>
+            
+            Conclusion:<br><br>
+            Real estate investment offers diverse opportunities for wealth creation. By understanding various investment strategies, conducting due diligence, leveraging financing options, and staying informed about market trends, investors can build a successful real estate portfolio and achieve long-term financial goals.
+            </p>
+        <a href="index.html"><button class="custom-button" onclick="redirectToIndex()">Go back to blogs</button></a>
+    </div>
+</div>
+
+</body>
+</html>

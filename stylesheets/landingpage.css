@@ -125,7 +125,7 @@ html{
 }
 .card2:hover{
   scale: 1.03; /* Increase size by 5% on hover */
-  box-shadow: 0 8px 16px hsl(192, 13%, 10%); /* Add shadow on hover */
+  box-shadow: 0 8px 16px hsl(192, 13%, 11%); /* Add shadow on hover */
 }
 
 .card img {
@@ -138,11 +138,17 @@ html{
 }
 
 .card-content {
-  padding: 20px; 
-  text-align: center;
+  text-decoration:none;
+  padding: 35px; /* Gap between text and image */
+  padding-top: 15px;
   color: #fff;
-  font-family: 'Lexend Regular', sans-serif;
-  font-size: 21px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 17px; /* Font size */
+}
+.card-content div{
+  font-size: 18px;
+  padding-bottom: 5px;
+  color: #BCF145;
 }
 
 @media (max-width: 992px) {
@@ -337,7 +343,7 @@ html{
   display: flex;
   flex-wrap: wrap;
   justify-content:flex-end;
-  column-gap:2cm;
+  column-gap:50px;
   height:fit-content;
 }
 .desc {
