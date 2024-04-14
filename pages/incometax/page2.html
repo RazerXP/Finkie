@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finkie</title>
+    <link rel="shortcut icon" href="../../assets/logo.ico" type="image/x-icon">
+    <link href="../../stylesheets/navbarfooter.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../stylesheets/incometax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="../../index.html#home" class="logolink"><img class="fin" src="../../assets/FINKIE.png"></a>
+          <div class="navbar-right"> 
+              <a href="../../index.html#tools">Tools</a>
+              <a href="../../index.html#essentials">Essentials</a>
+              <a href="../../index.html#blogs">Blogs</a>
+              <a href="../aboutus.html">About us</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="menu" id="menu"> 
+            <a href="../../index.html#tools">Tools</a>
+            <a href="../../index.html#essentials">Essentials</a>
+            <a href="../../index.html#blogs">Blogs</a>
+            <a href="../aboutus.html">About us</a>
+          </div>
+      </div>
+
+    <div id="container">
+        <div id="card">
+            <div id="header">
+                <span id="logo" style="display: flex; align-items:center; justify-content: center;">
+                    <svg class="rupee" style="width: 60px; height:60px; padding:0px 0px;" viewBox="-4.8 -4.8 57.60 57.60" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="0" fill="#BCF145" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1,.cls-2{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-linejoin:round;}.cls-1{stroke-width:3.216;}.cls-2{stroke-width:3.216;}</style></defs><title></title><path class="cls-1" d="M24,1A23,23,0,1,0,47,24H24Z"></path><path class="cls-2" d="M30,1V18H47A17,17,0,0,0,30,1Z"></path></g></svg>
+                </span>
+                <span id="text">
+                    <h2>Income Tax Calculator</h2>
+                </span>
+            </div>
+            <div id="contents">
+                <div id="first">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0;"></div>
+                            <div class="number-label" id="number1" style="left: 3%;" >1</div>
+                            <div class="number-label" id="number2" style="left: 26%;">2</div>
+                            <div class="number-label" id="number3" style="left: 50%;">3</div>
+                            <div class="number-label" id="number4" style="left: 74%;">4</div>
+                            <div class="number-label" id="number5" style="left: 96%;">5</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="second">
+                    <span id="IncomeDetail">Income Detail</span>
+                    
+                    <label class="radio-container">Monthly
+                        <input type="radio" name="radio" class="RadBtn1" checked="checked" value="monthly">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">Annual
+                        <input type="radio" name="radio" class="RadBtn1" value="annual">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <p class="paragraphs">My basic Salary</p>
+                    <div class="box">
+                        <svg class="rupee" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#BCF145" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#BCF145"/> </g>
+                        </svg>
+                        <input type="number" class="slider-value" id="sliderValue1" value="0" autocomplete="off">
+                    </div>
+                </div>
+                <div id="third">
+                    <span id="IncomeDetail">Other Income Detail</span>
+                
+                    <label class="radio-container">Monthly
+                        <input type="radio" name="radio2" checked="checked" value="monthly" class="RadBtn2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">Annual
+                        <input type="radio" name="radio2" value="annual" class="RadBtn2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div id="rest-parameters" style="display:flex; margin-top:10px; padding:5px 5px; flex-wrap: wrap; max-width: 100%;">
+                        <div class="topics">
+                            <p class="paragraphs">Income from interest on savings</p>
+                            <div class="box">
+                                <svg class="rupee" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#BCF145" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#BCF145"/> </g>
+                                </svg>
+                                <input type="number" class="slider-value" id="sliderValue2" value="0" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="topics">
+                            <p class="paragraphs">Interest on deposits</p>
+                            <div class="box">
+                                <svg class="rupee" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#BCF145" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#BCF145"/> </g>
+                                </svg>
+                                <input type="number" class="slider-value" id="sliderValue3" value="0" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="topics">
+                            <p class="paragraphs">Income From Rentals</p>
+                            <div class="box">
+                                <svg class="rupee" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#BCF145" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#BCF145"/> </g>
+                                </svg>
+                                <input type="number" class="slider-value" id="sliderValue4" value="0" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="topics">
+                            <p class="paragraphs">Income From any other source</p>
+                            <div class="box">
+                                <svg class="rupee" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.875 13V11C4.875 7.68629 7.49413 5 10.725 5H12.675C15.9059 5 18.525 7.68629 18.525 11V13C18.525 16.3137 15.9059 19 12.675 19H10.725C7.49413 19 4.875 16.3137 4.875 13Z" stroke="#BCF145" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M13.65 9.74998C14.0642 9.74998 14.4 9.41419 14.4 8.99998C14.4 8.58576 14.0642 8.24998 13.65 8.24998V9.74998ZM10.1683 8.24998C9.75406 8.24998 9.41828 8.58576 9.41828 8.99998C9.41828 9.41419 9.75406 9.74998 10.1683 9.74998V8.24998ZM10.161 8.25001C9.74679 8.25404 9.41429 8.59307 9.41831 9.00727C9.42234 9.42146 9.76137 9.75397 10.1756 9.74994L10.161 8.25001ZM12.2567 11.1L13.0067 11.1075C13.0067 11.1025 13.0067 11.0975 13.0067 11.0924L12.2567 11.1ZM10.1683 13.2L10.1756 12.45H10.1683V13.2ZM8.775 13.2V12.45C8.47201 12.45 8.19878 12.6323 8.08246 12.9121C7.96615 13.1918 8.02961 13.5141 8.2433 13.7289L8.775 13.2ZM11.0289 16.5289C11.321 16.8226 11.7959 16.8238 12.0895 16.5317C12.3832 16.2395 12.3844 15.7647 12.0923 15.471L11.0289 16.5289ZM10.1683 9.74998C10.5825 9.74998 10.9183 9.41419 10.9183 8.99998C10.9183 8.58576 10.5825 8.24998 10.1683 8.24998V9.74998ZM8.775 8.24998C8.36079 8.24998 8.025 8.58576 8.025 8.99998C8.025 9.41419 8.36079 9.74998 8.775 9.74998V8.24998ZM13.65 11.85C14.0642 11.85 14.4 11.5142 14.4 11.1C14.4 10.6858 14.0642 10.35 13.65 10.35V11.85ZM8.775 10.35C8.36079 10.35 8.025 10.6858 8.025 11.1C8.025 11.5142 8.36079 11.85 8.775 11.85V10.35ZM13.65 8.24998H10.1683V9.74998H13.65V8.24998ZM10.1756 9.74994C10.8856 9.74304 11.499 10.3324 11.5068 11.1075L13.0067 11.0924C12.9909 9.52515 11.7348 8.23471 10.161 8.25001L10.1756 9.74994ZM11.5068 11.0924C11.499 11.8675 10.8856 12.4569 10.1756 12.45L10.161 13.9499C11.7348 13.9652 12.9909 12.6748 13.0067 11.1075L11.5068 11.0924ZM10.1683 12.45H8.775V13.95H10.1683V12.45ZM8.2433 13.7289L11.0289 16.5289L12.0923 15.471L9.3067 12.671L8.2433 13.7289ZM10.1683 8.24998H8.775V9.74998H10.1683V8.24998ZM13.65 10.35H8.775V11.85H13.65V10.35Z" fill="#BCF145"/> </g>
+                                </svg>
+                                <input type="number" class="slider-value" id="sliderValue5" value="0" autocomplete="off">
+                            </div>
+                        </div><br><br>
+                    </div>
+                    
+                </div>
+                <div class="button-container">
+                    <a href="page1.html" class="anchors"><button class="custom-button">Back</button></a>
+                    <a href="page3.html" class="anchors"><button class="custom-button" onclick="updateProgress(53); P2SetItem()">Continue</button></a>
+                </div><br>
+            </div>        
+        </div>
+    </div>
+    <div class="navbar2" style="margin-top: 30px;">
+        <img class="fink" src="../../assets/Group 6.png">
+        <div class="navbar-right2">
+            <a href="#PRIVACY">PRIVACY POLICY</a>
+            <a href="#USER">USER AGREEMENT</a>
+            <a href="#SUPPORT">SUPPORT</a>
+            <a class="TEAM" href="#TEAM">TEAM</a>
+        </div>
+    </div>
+    <script src="../../scripts/incometaxUI.js"></script>
+    <script>
+        window.onload = function() {
+            updateProgress(30);
+            const FromStorage=sessionStorage.getItem("P2detailsArray");
+            const ParsedAfterStorage=JSON.parse(FromStorage);
+            console.log(ParsedAfterStorage);
+            for(let i=1;i<6;i++){
+                var P2InputField = document.getElementById("sliderValue"+i);
+                P2InputField.value=ParsedAfterStorage['P2InputFieldValue'+i];
+            }
+            const P2radioButtons1 = document.querySelectorAll(".RadBtn1");
+            for (const radioButton1 of P2radioButtons1) {
+                if (radioButton1.value==ParsedAfterStorage['selectedRadioButton1']) {
+                    radioButton1.checked=true;
+                    break;
+                }
+            }
+            const P2radioButtons2 = document.querySelectorAll(".RadBtn2");
+            for (const radioButton2 of P2radioButtons2) {
+                if (radioButton2.value==ParsedAfterStorage['selectedRadioButton2']) {
+                    radioButton2.checked=true;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
