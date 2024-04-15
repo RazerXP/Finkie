@@ -80,6 +80,7 @@ function calcDeductions(){
         const parents_age_above60 = P5Arr['checked2'];
         const my_premium = Number(P5Arr['P5InputFieldValue21']);
         const parents_premium = Number(P5Arr['P5InputFieldValue22']);
+        console.log(my_premium, parents_premium);
         if(my_age_above60=='TRUE') deductions += (my_premium>50000)? 50000 : my_premium;
         if(my_age_above60=='FALSE') deductions += (my_premium>25000)? 25000 : my_premium;
         if(parents_age_above60=='TRUE') deductions += (parents_premium>50000)? 50000 : parents_premium;
@@ -119,12 +120,17 @@ function calcIncomeSources(){
 
     // From other sources (self)
     let income_sources = 0;
-    for(let i=2; i<=5; i++) income_sources += Number(P2Arr["P2InputFieldValue"+i]);
+    income_sources += Number(P2Arr['P2InputFieldValue2']);
+    income_sources += Number(P2Arr['P2InputFieldValue3']);
+    income_sources += Number(P2Arr['P2InputFieldValue4'])*0.7;
+    income_sources += Number(P2Arr['P2InputFieldValue5']);
     if(P2Arr['selectedRadioButton2']=='monthly') income_sources *= 12;
 
     // From employer
     let income_sources2 = 0;
-    for(let i=1; i<=3; i++) income_sources2 += Number(P3Arr["P3InputFieldValue"+i]);
+    income_sources2 += Number(P3Arr['P3InputFieldValue1']);
+    income_sources2 += Number(P3Arr['P3InputFieldValue2']);
+    income_sources2 += Number(P3Arr['P3InputFieldValue3']);
     if(P3Arr['selectedRadioButton']=='monthly') income_sources2 *= 12;
 
     taxable_income += basicpay + income_sources + income_sources2;
