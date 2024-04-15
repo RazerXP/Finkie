@@ -139,10 +139,16 @@
             updateProgress(53);
             const FromStorage=sessionStorage.getItem("P3detailsArray");
             const ParsedAfterStorage=JSON.parse(FromStorage);
-            console.log(ParsedAfterStorage);
+            const storage=sessionStorage.getItem("P1textContents");
+            const checkemployeestatus=JSON.parse(storage);
             for(let i=1;i<5;i++){
                 var P3InputField = document.getElementById("sliderValue"+i);
                 P3InputField.value=ParsedAfterStorage['P3InputFieldValue'+i];
+                if(checkemployeestatus['P1DDtextcont5']=="Self-Employed"){
+                    P3InputField.disabled=true;
+                    P3InputField.style.opacity=0.4;
+                    P3InputField.value=0;
+                }
             }
             const P3radioButtons = document.querySelectorAll(".RadBtn");
             for (const radioButton of P3radioButtons) {
@@ -151,7 +157,6 @@
                     break;
                 }
             }
-
         }
     </script>
 </body>

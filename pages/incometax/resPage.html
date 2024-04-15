@@ -52,8 +52,8 @@
                 <div id="first">
                     <div style="color: #888888; font-size: 14px;">Select Tax Regime</div>
                     <div>
-                        <input type="checkbox" id="toggle">
-                        <label for="toggle" id="toggler" onchange="OldtoNew()">
+                        <input type="checkbox" id="toggle" onchange="calcTax()">
+                        <label for="toggle" id="toggler">
                             <span class="OLD">OLD</span>
                             <span class="NEW">NEW</span>
                         </label>
@@ -67,7 +67,7 @@
                             <span id="text-Taxable-Income">Taxable Income</span>
                         </div>
                         <div id="Tax-Deductions">
-                            <span style="background-color: red; height: 19px; width:19px; display: inline-flex; border-radius: 50%;"></span>
+                            <span style="background-color: #F16E45; height: 19px; width:19px; display: inline-flex; border-radius: 50%;"></span>
                             <span id="text-Tax-Deductions">Tax Deductions</span>
                         </div>
                         <div id="Tax-Payable">
@@ -101,5 +101,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../../scripts/incometaxUI.js"></script>
+    <script src="../../scripts/incometaxCALC.js"></script>
 </body>
 </html>

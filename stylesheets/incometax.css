@@ -144,7 +144,7 @@ body{
     text-align: left;
     background-color: #21292B;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-family: lexend;
     margin-left: 0;
     color:white;
@@ -369,7 +369,7 @@ body{
     position:absolute;
     width:20px;
     top:6px;
-    z-index: 100;
+    z-index: 5;
 }
 #toggler .OLD{
     font-size: 0.9rem;
