@@ -78,8 +78,8 @@ function calcDeductions(){
     if(P5Arr['box2']=='checked'){
         const my_age_above60 = P5Arr['checked1'];
         const parents_age_above60 = P5Arr['checked2'];
-        const my_premium = Number(P3Arr['P5InputFieldValue21']);
-        const parents_premium = Number(P3Arr['P5InputFieldValue22']);
+        const my_premium = Number(P5Arr['P5InputFieldValue21']);
+        const parents_premium = Number(P5Arr['P5InputFieldValue22']);
         if(my_age_above60=='TRUE') deductions += (my_premium>50000)? 50000 : my_premium;
         if(my_age_above60=='FALSE') deductions += (my_premium>25000)? 25000 : my_premium;
         if(parents_age_above60=='TRUE') deductions += (parents_premium>50000)? 50000 : parents_premium;
