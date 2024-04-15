@@ -208,7 +208,7 @@ function oldtax(){
     if (chartStatus != undefined) {
         chartStatus.destroy();  
     }
-    displayChart(taxable_income-deductions-50000+capital_gains, deductions+50000, tax_payable + old_regime_tax);
+    displayChart(taxable_income-50000+capital_gains, deductions+50000, tax_payable + old_regime_tax);
 }
 function calcTax(){
     if(taxable_income<700000) {
