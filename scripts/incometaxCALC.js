@@ -157,7 +157,7 @@ function calcCapitalGains(){
         const stcg_real_estate = Number(P4Arr['P4InputFieldValue31']);
         const ltcg_real_estate = Number(P4Arr['P4InputFieldValue32']);
         taxable_income += stcg_real_estate;
-        tax_payable += 0.1*ltcg_real_estate;
+        tax_payable += 0.2*ltcg_real_estate;
         capital_gains += ltcg_real_estate;
     }
 }
