@@ -119,17 +119,12 @@ function calcIncomeSources(){
 
     // From other sources (self)
     let income_sources = 0;
-    income_sources += Number(P2Arr['P2InputFieldValue2']);
-    income_sources += Number(P2Arr['P2InputFieldValue3']);
-    income_sources += Number(P2Arr['P2InputFieldValue4'])*0.7;
-    income_sources += Number(P2Arr['P2InputFieldValue5']);
+    for(let i=2; i<=5; i++) income_sources += Number(P2Arr["P2InputFieldValue"+i]);
     if(P2Arr['selectedRadioButton2']=='monthly') income_sources *= 12;
 
     // From employer
     let income_sources2 = 0;
-    income_sources2 += Number(P3Arr['P3InputFieldValue1']);
-    income_sources2 += Number(P3Arr['P3InputFieldValue2']);
-    income_sources2 += Number(P3Arr['P3InputFieldValue3']);
+    for(let i=1; i<=3; i++) income_sources2 += Number(P3Arr["P3InputFieldValue"+i]);
     if(P3Arr['selectedRadioButton']=='monthly') income_sources2 *= 12;
 
     taxable_income += basicpay + income_sources + income_sources2;
