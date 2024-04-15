@@ -212,6 +212,7 @@ function oldtax(){
 }
 function calcTax(){
     if(taxable_income<700000) {
+        let chartStatus = Chart.getChart("my-chart"); // <canvas> id
         if (chartStatus != undefined) {
             chartStatus.destroy();  
         }
