@@ -73,6 +73,7 @@ function calcDeductions(){
         for(let i=1; i<=4; i++) total_80c += P5Arr["P5InputFieldValue1"+i];
     }
     deductions += (total_80c>150000)? 150000 : total_80c;
+    
 
     // 80d
     if(P5Arr['box2']=='checked'){
@@ -80,7 +81,6 @@ function calcDeductions(){
         const parents_age_above60 = P5Arr['checked2'];
         const my_premium = Number(P5Arr['P5InputFieldValue21']);
         const parents_premium = Number(P5Arr['P5InputFieldValue22']);
-        console.log(my_premium, parents_premium);
         if(my_age_above60=='TRUE') deductions += (my_premium>50000)? 50000 : my_premium;
         if(my_age_above60=='FALSE') deductions += (my_premium>25000)? 25000 : my_premium;
         if(parents_age_above60=='TRUE') deductions += (parents_premium>50000)? 50000 : parents_premium;
@@ -92,7 +92,7 @@ function calcDeductions(){
         let nps = Number(P5Arr['P5InputFieldValue31']);
         deductions += (nps>50000)? 50000 : nps;
     }
-
+    
     // 80e & Section 24
     if(P5Arr['box4']=='checked'){
         const edloan = Number(P5Arr['P5InputFieldValue41']);
@@ -100,7 +100,7 @@ function calcDeductions(){
         deductions += edloan;
         deductions += (homeloan>200000)? 200000 : homeloan;
     }
-
+    
     // 80g
     if(P5Arr['box5']=='checked'){
         const donations = Number(P5Arr['P5InputFieldValue51']);
@@ -131,6 +131,7 @@ function calcIncomeSources(){
     income_sources2 += Number(P3Arr['P3InputFieldValue1']);
     income_sources2 += Number(P3Arr['P3InputFieldValue2']);
     income_sources2 += Number(P3Arr['P3InputFieldValue3']);
+    income_sources2 += Number(P3Arr['P3InputFieldValue4']);
     if(P3Arr['selectedRadioButton']=='monthly') income_sources2 *= 12;
 
     taxable_income += basicpay + income_sources + income_sources2;
@@ -142,9 +143,9 @@ function calcCapitalGains(){
     if(P4Arr['box1']=='checked'){
         const stcg = Number(P4Arr['P4InputFieldValue11']);
         let ltcg = Number(P4Arr['P4InputFieldValue12']);
+        capital_gains += ltcg + stcg;
         ltcg = (ltcg>100000)? 100000 : ltcg;
         tax_payable += (0.15*stcg) + (0.1*ltcg);
-        capital_gains += ltcg + stcg;
     }
 
     // Debt
@@ -158,7 +159,7 @@ function calcCapitalGains(){
         const stcg_real_estate = Number(P4Arr['P4InputFieldValue31']);
         const ltcg_real_estate = Number(P4Arr['P4InputFieldValue32']);
         taxable_income += stcg_real_estate;
-        tax_payable += 0.2*ltcg_real_estate;
+        tax_payable += 0.208*ltcg_real_estate;
         capital_gains += ltcg_real_estate;
     }
 }
@@ -186,7 +187,7 @@ function newtax(){
     if (chartStatus != undefined) {
         chartStatus.destroy();  
     }
-    displayChart(taxable_income-50000+capital_gains, 50000, tax_payable + new_regime_tax);
+    displayChart(taxable_income-50000+capital_gains, 0, tax_payable + new_regime_tax);
 }
 function oldtax(){
     let slabs, rates;
@@ -208,7 +209,7 @@ function oldtax(){
     if (chartStatus != undefined) {
         chartStatus.destroy();  
     }
-    displayChart(taxable_income-50000+capital_gains, deductions+50000, tax_payable + old_regime_tax);
+    displayChart(taxable_income-50000+capital_gains-deductions, deductions, tax_payable + old_regime_tax);
 }
 function calcTax(){
     if(taxable_income<700000) {
