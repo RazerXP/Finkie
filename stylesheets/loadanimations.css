@@ -109,3 +109,96 @@
         opacity: 1;
     }
 }
+
+
+.banner {
+    background-color: #21292B;
+    position: relative; /* Add position relative to create stacking context */
+    display: flex; /* Use flexbox to center vertically and horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    max-height: 80vh;
+    overflow: hidden; /* Set the height of the banner to the full viewport height */
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+  }
+
+    .bannerlogo {
+        position: absolute; /* Position the logo absolutely */
+        z-index: 2; /* Place logo above cards */
+        /* Adjust logo size */
+        left: 7.8vw;
+        width: 50vw; /* Change the width of the logo */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .bannerimg  {
+        width: 100%; /* Make the logo responsive */
+        height: auto;
+    }
+
+    .wrapper-wrapper{
+        transform:scale(1.06);
+    }
+
+    .bannercard-container-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 0px; /* Adjust top margin as needed */
+        transform:rotate(15deg);
+    }
+
+    .bannercard-container {
+        width: calc(16.666% - 10px); /* 100% / 6 columns - margin */
+        margin-right: 5px; /* Adjust the margin between columns */
+        margin-left: 15px;
+        overflow: hidden;
+        height: 1000px; /* Specify the height to limit the container size */
+        position: relative; /* Add position relative for absolute positioning of cards */
+    }
+
+    .bannercard {
+        max-width: 100%; /* Set maximum width for the card */
+        max-height: 100%; /* Set maximum height for the card */
+        width: auto; /* Set width to auto to maintain aspect ratio */
+        height: auto; /* Set height to auto to maintain aspect ratio */
+        margin-bottom: 10px;
+    }
+
+    /* Define keyframes for moving cards */
+    @keyframes moveCardsUp {
+        0%, 100% {
+            transform: translateY(-250%);
+        }
+        50% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes moveCardsDown {
+        0%, 100% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(-250%);
+        }
+    }
+
+    .bannercard-container:nth-child(even) .bannercard {
+        animation: moveCardsUp 40s linear infinite; /* Adjust timing as needed */
+    }
+
+    .bannercard-container:nth-child(odd) .bannercard {
+        animation: moveCardsDown 40s linear infinite; /* Adjust timing as needed */
+    }
+    /* Media query for mobile devices */
+    @media screen and (max-width: 500px) { /* Change 600px to desired breakpoint */
+        .banner {
+            height: 300px; /* Set a fixed height for mobile devices */
+        }
+
+        .bannercard-container {
+            height: 300px; /* Adjust card container height accordingly */
+        }
+    }

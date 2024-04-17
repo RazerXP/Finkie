@@ -15,6 +15,14 @@ window.addEventListener('scroll', function() {
     });
 });
 
+window.onload = function() {
+  var services = document.querySelectorAll('.card');
+  services.forEach(function(service) {
+    if (isElementPartiallyInViewport(service) && !service.classList.contains('slide-in')) {
+      service.classList.add('slide-in');
+    }
+  });
+}
 
 function isElementPartiallyInViewport(element) {
 var rect = element.getBoundingClientRect();
