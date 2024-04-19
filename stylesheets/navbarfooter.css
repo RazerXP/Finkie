@@ -44,7 +44,8 @@ body{
     width: 200px;
     background-color: #0F1719;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 0px #111719;
+    border-bottom-left-radius: 20px;
     z-index: 999;
   }
   .menu.active {

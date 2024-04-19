@@ -147,6 +147,7 @@
         width: 100%;
         margin-top: 0px; /* Adjust top margin as needed */
         transform:rotate(15deg);
+        overflow: hidden;
     }
 
     .bannercard-container {
@@ -194,11 +195,11 @@
     }
     /* Media query for mobile devices */
     @media screen and (max-width: 500px) { /* Change 600px to desired breakpoint */
-        .banner {
+        .banner{
             height: 300px; /* Set a fixed height for mobile devices */
         }
 
-        .bannercard-container {
-            height: 300px; /* Adjust card container height accordingly */
+        .bannercard-container-wrapper {
+            height: 500px; /* Adjust card container height accordingly */
         }
     }

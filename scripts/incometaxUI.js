@@ -322,3 +322,33 @@ function SetOpacityForTickBoxes(numOfBtn){
     }
 }
 //surryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+
+    var menuIcon = document.querySelector('.menu-icon');
+    menuIcon.classList.toggle('active');
+  }
+
+  function toggleOverlay(num) {
+  var overlay = document.getElementById("overlay"+`${num}`);
+  var overlayContent = document.getElementById("overlay-content"+`${num}`);
+  var btn = document.getElementById("knowbutton"+`${num}`);
+
+  if (overlay.style.opacity == 0) {
+    // Show the overlay
+    overlay.style.visibility = "visible";
+    overlay.style.opacity = 1;
+    overlayContent.style.animation = "slideInOverlay 0.5s ease-in-out forwards";
+    btn.classList.toggle('active');
+  } else {
+    // Hide the overlay with slide-out animation
+    overlay.style.opacity = 0;
+    overlayContent.style.animation = "slideOutOverlay 0.5s ease-in-out forwards";
+    setTimeout(function() {
+      overlay.style.visibility = "hidden";
+    }, 500); // Hide overlay after animation completes
+    btn.classList.toggle('active');
+  }
+}
